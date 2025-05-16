@@ -3,7 +3,8 @@ import { FaRandom, FaSearch } from "react-icons/fa";
 const AttackonTitanSeason4 = () => {
   const videos = [
     { 
-      id: 1, 
+      id: 1,
+      title: "The Other Side of the Sea",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-1", 
       HD2: "https://megaplay.buzz/stream/s-2/51475/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-1", 
@@ -11,6 +12,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 2, 
+      title: "Midnight Train",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-2", 
       HD2: "https://megaplay.buzz/stream/s-2/51476/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-2", 
@@ -18,6 +20,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 3, 
+      title: "The Door of Hope",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-3", 
       HD2: "https://megaplay.buzz/stream/s-2/51477/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-3", 
@@ -25,6 +28,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 4, 
+      title: "From One Hand to Another",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-4", 
       HD2: "https://megaplay.buzz/stream/s-2/51478/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-4", 
@@ -32,6 +36,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 5, 
+      title: "Declaration of War",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-5", 
       HD2: "https://megaplay.buzz/stream/s-2/51479/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-5", 
@@ -39,6 +44,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 6, 
+      title: "The War Hammer Titan",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-6", 
       HD2: "https://megaplay.buzz/stream/s-2/51480/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-6", 
@@ -46,6 +52,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 7, 
+      title: "Assault",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-7", 
       HD2: "https://megaplay.buzz/stream/s-2/51481/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-7", 
@@ -53,6 +60,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 8, 
+      title: "Assassin's Bullet",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-8", 
       HD2: "https://megaplay.buzz/stream/s-2/51482/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-8", 
@@ -60,6 +68,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 9, 
+      title: "Brave Volunteers",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-9", 
       HD2: "https://megaplay.buzz/stream/s-2/51483/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-9", 
@@ -67,6 +76,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 10, 
+      title: "A Sound Argument",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-10", 
       HD2: "https://megaplay.buzz/stream/s-2/51484/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-10", 
@@ -74,6 +84,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 11, 
+      title: "Deceiver",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-11", 
       HD2: "https://megaplay.buzz/stream/s-2/51485/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-11", 
@@ -81,6 +92,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 12, 
+      title: "Guides",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-12", 
       HD2: "https://megaplay.buzz/stream/s-2/51486/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-12", 
@@ -88,6 +100,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 13, 
+      title: "Children of the Forest",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-13", 
       HD2: "https://megaplay.buzz/stream/s-2/51487/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-13", 
@@ -95,6 +108,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 14, 
+      title: "Savagery",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-14", 
       HD2: "https://megaplay.buzz/stream/s-2/51488/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-14", 
@@ -102,6 +116,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 15, 
+      title: "Sole Salvation",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-15", 
       HD2: "https://megaplay.buzz/stream/s-2/51489/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-15", 
@@ -109,6 +124,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 16, 
+      title: "Above and Below",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-dub-episode-16", 
       HD2: "https://megaplay.buzz/stream/s-2/51490/dub", 
       HDSUB1: "https://2anime.xyz/embed/Shingeki-no-Kyojin-The-Final-Season-episode-16", 
@@ -116,6 +132,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 17, 
+      title: "Judgement",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-1", 
       HD2: "https://megaplay.buzz/stream/s-2/85848/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-1", 
@@ -123,6 +140,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 18, 
+      title: "Sneak Attack",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-2", 
       HD2: "https://megaplay.buzz/stream/s-2/86081/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-2", 
@@ -130,6 +148,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 19, 
+      title: "Two Brothers",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-3", 
       HD2: "https://megaplay.buzz/stream/s-2/86082/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-3", 
@@ -137,6 +156,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 20, 
+      title: "Memories of the Future",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-4", 
       HD2: "https://megaplay.buzz/stream/s-2/86083/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-4", 
@@ -144,6 +164,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 21, 
+      title: "From You, 2,000 Years Ago",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-5", 
       HD2: "https://megaplay.buzz/stream/s-2/86326/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-5", 
@@ -151,6 +172,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 22, 
+      title: "Thaw",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-6", 
       HD2: "https://megaplay.buzz/stream/s-2/86327/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-6", 
@@ -158,6 +180,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 23, 
+      title: "Sunset",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-7", 
       HD2: "https://megaplay.buzz/stream/s-2/86707/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-7", 
@@ -165,6 +188,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 24, 
+      title: "Pride",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-8", 
       HD2: "https://megaplay.buzz/stream/s-2/86708/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-8", 
@@ -172,6 +196,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 25, 
+      title: "Night of the End",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-9", 
       HD2: "https://megaplay.buzz/stream/s-2/86709/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-9", 
@@ -179,6 +204,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 26, 
+      title: "Traitor",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-10", 
       HD2: "https://megaplay.buzz/stream/s-2/88252/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-10", 
@@ -186,6 +212,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 27, 
+      title: "Retrospective",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-11", 
       HD2: "https://megaplay.buzz/stream/s-2/88253/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-11", 
@@ -193,6 +220,7 @@ const AttackonTitanSeason4 = () => {
     },
     { 
       id: 28, 
+      title: "The Dawn of Humanity",
       HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-dub-episode-12", 
       HD2: "https://megaplay.buzz/stream/s-2/88254/dub", 
       HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-the-final-season-part-2-episode-12", 
@@ -248,11 +276,14 @@ const AttackonTitanSeason4 = () => {
     
   };
 
-  const [currentVideo, setCurrentVideo] = useState();
+ const [currentVideo, setCurrentVideo] = useState();
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [selectedserver, setSelectedServer] = useState([]);
   const [toggle, setToggle] = useState();
+  const [episodeRange, setEpisodeRange] = useState("001-25");
+  const [episodeSearch, setEpisodeSearch] = useState("");
+  const [showTitles, setShowTitles] = useState(false); // New state for toggling titles
   // Set default video and server on initial render
   React.useEffect(() => {
     const defaultVideo = videos.find(video => video.id === 1);
@@ -378,30 +409,92 @@ const AttackonTitanSeason4 = () => {
 
      { /* Main Page Content */}
         <div className="flex flex-col lg:flex-row p-4 gap-4">
-            <div className="bg-gray-800 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md">
-            <img
+
+
+            {/* Anime Poster */}
+            <div className="bg-gray-900 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-lg text-white flex flex-col">
+           <img
           src="https://static1.animekai.to/83/i/4/9a/6766499bd3723.jpg"
           alt="Anime poster"
           className="w-16 md:w-32 lg:w-48"
-          style={{ height: "191px", width: "min-content", objectFit: "cover" }}
+          style={{ height: "min-content",objectFit: "cover" }}
             />
-            <h2 className="text-2xl font-bold mt-2 text-center" style={{ fontSize: "10px" }}></h2>
+              <div className="flex items-center justify-between mb-4">
+                
+                <h2 className="text-xl font-bold">Episodes</h2>
+                <div className="flex items-center space-x-2">
 
-            <h2 className="text-xl font-bold mb-4">List of episodes:</h2>
-            <div className="grid grid-cols-4 gap-2">
-          {videos.map((video) => (
-          <button
-            key={video.id}
-            onClick={() => handleEpisodetoggle(video.id)}
-            className={`px-4 py-2 rounded-lg text-center ${
-              toggle === video.id ? "bg-purple-600" : "bg-gray-700 hover:bg-gray-600"
-            }`}
+                  <button
+                    className="bg-gray-700 px-2 py-1 rounded text-sm hover:bg-gray-600"
+                    onClick={() => setShowTitles(!showTitles)}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center mb-4 space-x-2">
+              <select
+                className="bg-gray-700 text-white rounded px-2 py-1 text-sm focus:outline-none"
+                value={episodeRange}
+                onChange={(e) => setEpisodeRange(e.target.value)}
               >
-            {video.id}
-              </button>
-          ))}
+                <option>001-25</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Find"
+                className="flex-grow bg-gray-700 rounded px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none"
+                value={episodeSearch}
+                onChange={(e) => setEpisodeSearch(e.target.value)}
+              />
+              </div>
+              {showTitles ? (
+                <div className="overflow-y-auto bg-gray-800 rounded-lg p-2" style={{ maxHeight: "34rem" }}>
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <div
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`flex items-center p-2 rounded cursor-pointer ${
+                          toggle === video.id ? "bg-orange-500 text-black" : "hover:bg-gray-700 text-gray-300"
+                        }`}
+                      >
+                        <span className="w-6 text-right mr-4 font-semibold">{video.id}</span>
+                        <span className="truncate">{video.title}</span>
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2">
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <button
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`px-4 py-2 rounded-lg text-center ${
+                          toggle === video.id ? "bg-orange-500" : "bg-gray-700 hover:bg-gray-600"
+                        }`}
+                      >
+                        {video.id}
+                      </button>
+                    ))}
+                </div>
+              )}
             </div>
-          </div>
           <div className="flex-1 p-4 bg-gray-800 rounded-lg shadow-md">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingTop: "56.25%" }}>
           <iframe
