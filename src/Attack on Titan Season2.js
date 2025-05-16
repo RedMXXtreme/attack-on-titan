@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { FaRandom, FaSearch } from "react-icons/fa";
 const AttackonTitanSeason2 = () => {  
   const videos = [
-    { id: 1, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-1", HD2: "https://megaplay.buzz/stream/s-2/4021/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-1", HDSUB2: "https://megaplay.buzz/stream/s-2/4021/sub" },
-    { id: 2, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-2", HD2: "https://megaplay.buzz/stream/s-2/4022/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-2", HDSUB2: "https://megaplay.buzz/stream/s-2/4022/sub" },
-    { id: 3, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-3", HD2: "https://megaplay.buzz/stream/s-2/4023/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-3", HDSUB2: "https://megaplay.buzz/stream/s-2/4023/sub" },
-    { id: 4, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-4", HD2: "https://megaplay.buzz/stream/s-2/4024/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-4", HDSUB2: "https://megaplay.buzz/stream/s-2/4024/sub" },
-    { id: 5, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-5", HD2: "https://megaplay.buzz/stream/s-2/4025/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-5", HDSUB2: "https://megaplay.buzz/stream/s-2/4025/sub" },
-    { id: 6, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-6", HD2: "https://megaplay.buzz/stream/s-2/4026/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-6", HDSUB2: "https://megaplay.buzz/stream/s-2/4026/sub" },
-    { id: 7, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-7", HD2: "https://megaplay.buzz/stream/s-2/4027/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-7", HDSUB2: "https://megaplay.buzz/stream/s-2/4027/sub" },
-    { id: 8, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-8", HD2: "https://megaplay.buzz/stream/s-2/4028/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-8", HDSUB2: "https://megaplay.buzz/stream/s-2/4028/sub" },
-    { id: 9, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-9", HD2: "https://megaplay.buzz/stream/s-2/4029/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-9", HDSUB2: "https://megaplay.buzz/stream/s-2/4029/sub" },
-    { id: 10, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-10", HD2: "https://megaplay.buzz/stream/s-2/4030/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-10", HDSUB2: "https://megaplay.buzz/stream/s-2/4030/sub" },
-    { id: 11, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-11", HD2: "https://megaplay.buzz/stream/s-2/4031/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-11", HDSUB2: "https://megaplay.buzz/stream/s-2/4031/sub" },
-    { id: 12, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-12", HD2: "https://megaplay.buzz/stream/s-2/4032/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-12", HDSUB2: "https://megaplay.buzz/stream/s-2/4032/sub" },
+    { id: 1,  title: "Beast Titan", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-1",  HD2: "https://megaplay.buzz/stream/s-2/4021/dub",  HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-1",   HDSUB2: "https://megaplay.buzz/stream/s-2/4021/sub" },
+    { id: 2,  title: "I'm Home", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-2", HD2: "https://megaplay.buzz/stream/s-2/4022/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-2", HDSUB2: "https://megaplay.buzz/stream/s-2/4022/sub" },
+    { id: 3,  title: "Southwestward", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-3", HD2: "https://megaplay.buzz/stream/s-2/4023/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-3", HDSUB2: "https://megaplay.buzz/stream/s-2/4023/sub" },
+    { id: 4,  title: "Soldier", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-4", HD2: "https://megaplay.buzz/stream/s-2/4024/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-4", HDSUB2: "https://megaplay.buzz/stream/s-2/4024/sub" },
+    { id: 5,  title: "Historia", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-5", HD2: "https://megaplay.buzz/stream/s-2/4025/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-5", HDSUB2: "https://megaplay.buzz/stream/s-2/4025/sub" },
+    { id: 6,  title: "Warrior", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-6", HD2: "https://megaplay.buzz/stream/s-2/4026/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-6", HDSUB2: "https://megaplay.buzz/stream/s-2/4026/sub" },
+    { id: 7,  title: "Close Combat", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-7", HD2: "https://megaplay.buzz/stream/s-2/4027/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-7", HDSUB2: "https://megaplay.buzz/stream/s-2/4027/sub" },
+    { id: 8,  title: "The Hunters", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-8", HD2: "https://megaplay.buzz/stream/s-2/4028/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-8", HDSUB2: "https://megaplay.buzz/stream/s-2/4028/sub" },
+    { id: 9,  title: "Opening", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-9", HD2: "https://megaplay.buzz/stream/s-2/4029/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-9", HDSUB2: "https://megaplay.buzz/stream/s-2/4029/sub" },
+    { id: 10, title: "Children", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-10", HD2: "https://megaplay.buzz/stream/s-2/4030/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-10", HDSUB2: "https://megaplay.buzz/stream/s-2/4030/sub" },
+    { id: 11, title: "Charge", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-11", HD2: "https://megaplay.buzz/stream/s-2/4031/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-11", HDSUB2: "https://megaplay.buzz/stream/s-2/4031/sub" },
+    { id: 12, title: "Scream", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-dub-episode-12", HD2: "https://megaplay.buzz/stream/s-2/4032/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-season-2-episode-12", HDSUB2: "https://megaplay.buzz/stream/s-2/4032/sub" },
   ];
 
   const ranvideo = [
@@ -64,11 +64,14 @@ const AttackonTitanSeason2 = () => {
     
   };
 
-  const [currentVideo, setCurrentVideo] = useState();
+ const [currentVideo, setCurrentVideo] = useState();
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [selectedserver, setSelectedServer] = useState([]);
   const [toggle, setToggle] = useState();
+  const [episodeRange, setEpisodeRange] = useState("001-25");
+  const [episodeSearch, setEpisodeSearch] = useState("");
+  const [showTitles, setShowTitles] = useState(false); // New state for toggling titles
   // Set default video and server on initial render
   React.useEffect(() => {
     const defaultVideo = videos.find(video => video.id === 1);
@@ -194,30 +197,92 @@ const AttackonTitanSeason2 = () => {
 
      { /* Main Page Content */}
         <div className="flex flex-col lg:flex-row p-4 gap-4">
-            <div className="bg-gray-800 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md">
-            <img
+
+
+            {/* Anime Poster */}
+            <div className="bg-gray-900 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-lg text-white flex flex-col">
+           <img
           src="https://d.player.one/en/full/155284/attack-titan-season-2-coming-funimation.jpg?w=736&f=ec9892fcec929dbfb46849c391c34ecd"
           alt="Anime poster"
           className="w-16 md:w-32 lg:w-48"
-          style={{ height: "191px", width: "min-content", objectFit: "cover" }}
+          style={{ height: "min-content",objectFit: "cover" }}
             />
-            <h2 className="text-2xl font-bold mt-2 text-center" style={{ fontSize: "10px" }}></h2>
+              <div className="flex items-center justify-between mb-4">
+                
+                <h2 className="text-xl font-bold">Episodes</h2>
+                <div className="flex items-center space-x-2">
 
-            <h2 className="text-xl font-bold mb-4">List of episodes:</h2>
-            <div className="grid grid-cols-4 gap-2">
-          {videos.map((video) => (
-          <button
-            key={video.id}
-            onClick={() => handleEpisodetoggle(video.id)}
-            className={`px-4 py-2 rounded-lg text-center ${
-              toggle === video.id ? "bg-purple-600" : "bg-gray-700 hover:bg-gray-600"
-            }`}
+                  <button
+                    className="bg-gray-700 px-2 py-1 rounded text-sm hover:bg-gray-600"
+                    onClick={() => setShowTitles(!showTitles)}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center mb-4 space-x-2">
+              <select
+                className="bg-gray-700 text-white rounded px-2 py-1 text-sm focus:outline-none"
+                value={episodeRange}
+                onChange={(e) => setEpisodeRange(e.target.value)}
               >
-            {video.id}
-              </button>
-          ))}
+                <option>001-12</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Find"
+                className="flex-grow bg-gray-700 rounded px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none"
+                value={episodeSearch}
+                onChange={(e) => setEpisodeSearch(e.target.value)}
+              />
+              </div>
+              {showTitles ? (
+                <div className="overflow-y-auto bg-gray-800 rounded-lg p-2" style={{ maxHeight: "34rem" }}>
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <div
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`flex items-center p-2 rounded cursor-pointer ${
+                          toggle === video.id ? "bg-orange-500 text-black" : "hover:bg-gray-700 text-gray-300"
+                        }`}
+                      >
+                        <span className="w-6 text-right mr-4 font-semibold">{video.id}</span>
+                        <span className="truncate">{video.title}</span>
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2">
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <button
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`px-4 py-2 rounded-lg text-center ${
+                          toggle === video.id ? "bg-orange-500" : "bg-gray-700 hover:bg-gray-600"
+                        }`}
+                      >
+                        {video.id}
+                      </button>
+                    ))}
+                </div>
+              )}
             </div>
-          </div>
           <div className="flex-1 p-4 bg-gray-800 rounded-lg shadow-md">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingTop: "56.25%" }}>
           <iframe
