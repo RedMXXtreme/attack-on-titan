@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { FaRandom, FaSearch } from "react-icons/fa";
-import './App.css';
-
 const AttackonTitanSeason1 = () => {
+  // === Attack on Titan Season 1 Episodes ===
   const videos = [
-    { id: 1, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-1", HD2: "https://megaplay.buzz/stream/s-2/3303/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-1", HDSUB2: "https://megaplay.buzz/stream/s-2/3303/sub" },
-    { id: 2, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-2", HD2: "https://megaplay.buzz/stream/s-2/3304/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-2", HDSUB2: "https://megaplay.buzz/stream/s-2/3304/sub" },
-    { id: 3, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-3", HD2: "https://megaplay.buzz/stream/s-2/3305/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-3", HDSUB2: "https://megaplay.buzz/stream/s-2/3305/sub" },
-    { id: 4, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-4", HD2: "https://megaplay.buzz/stream/s-2/3306/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-4", HDSUB2: "https://megaplay.buzz/stream/s-2/3306/sub" },
-    { id: 5, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-5", HD2: "https://megaplay.buzz/stream/s-2/3307/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-5", HDSUB2: "https://megaplay.buzz/stream/s-2/3307/sub" },
-    { id: 6, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-6", HD2: "https://megaplay.buzz/stream/s-2/3308/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-6", HDSUB2: "https://megaplay.buzz/stream/s-2/3308/sub" },
-    { id: 7, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-7", HD2: "https://megaplay.buzz/stream/s-2/3309/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-7", HDSUB2: "https://megaplay.buzz/stream/s-2/3309/sub" },
-    { id: 8, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-8", HD2: "https://megaplay.buzz/stream/s-2/3310/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-8", HDSUB2: "https://megaplay.buzz/stream/s-2/3310/sub" },
-    { id: 9, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-9", HD2: "https://megaplay.buzz/stream/s-2/3311/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-9", HDSUB2: "https://megaplay.buzz/stream/s-2/3311/sub" },
-    { id: 10, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-10", HD2: "https://megaplay.buzz/stream/s-2/3312/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-10", HDSUB2: "https://megaplay.buzz/stream/s-2/3312/sub" },
-    { id: 11, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-11", HD2: "https://megaplay.buzz/stream/s-2/3313/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-11", HDSUB2: "https://megaplay.buzz/stream/s-2/3313/sub" },
-    { id: 12, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-12", HD2: "https://megaplay.buzz/stream/s-2/3314/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-12", HDSUB2: "https://megaplay.buzz/stream/s-2/3314/sub" },
-    { id: 13, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-13", HD2: "https://megaplay.buzz/stream/s-2/3315/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-13", HDSUB2: "https://megaplay.buzz/stream/s-2/3315/sub" },
-    { id: 14, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-14", HD2: "https://megaplay.buzz/stream/s-2/3316/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-14", HDSUB2: "https://megaplay.buzz/stream/s-2/3316/sub" },
-    { id: 15, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-15", HD2: "https://megaplay.buzz/stream/s-2/3317/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-15", HDSUB2: "https://megaplay.buzz/stream/s-2/3317/sub" },
-    { id: 16, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-16", HD2: "https://megaplay.buzz/stream/s-2/3318/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-16", HDSUB2: "https://megaplay.buzz/stream/s-2/3318/sub" },
-    { id: 17, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-17", HD2: "https://megaplay.buzz/stream/s-2/3319/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-17", HDSUB2: "https://megaplay.buzz/stream/s-2/3319/sub" },
-    { id: 18, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-18", HD2: "https://megaplay.buzz/stream/s-2/3320/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-18", HDSUB2: "https://megaplay.buzz/stream/s-2/3320/sub" },
-    { id: 19, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-19", HD2: "https://megaplay.buzz/stream/s-2/3321/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-19", HDSUB2: "https://megaplay.buzz/stream/s-2/3321/sub" },
-    { id: 20, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-20", HD2: "https://megaplay.buzz/stream/s-2/3322/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-20", HDSUB2: "https://megaplay.buzz/stream/s-2/3322/sub" },
-    { id: 21, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-21", HD2: "https://megaplay.buzz/stream/s-2/3323/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-21", HDSUB2: "https://megaplay.buzz/stream/s-2/3323/sub" },
-    { id: 22, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-22", HD2: "https://megaplay.buzz/stream/s-2/3324/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-22", HDSUB2: "https://megaplay.buzz/stream/s-2/3324/sub" },
-    { id: 23, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-23", HD2: "https://megaplay.buzz/stream/s-2/3325/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-23", HDSUB2: "https://megaplay.buzz/stream/s-2/3325/sub" },
-    { id: 24, HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-24", HD2: "https://megaplay.buzz/stream/s-2/3326/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-24", HDSUB2: "https://megaplay.buzz/stream/s-2/3326/sub" },
+    { id: 1, title: "To You, in 2000 Years: The Fall of Shiganshina", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-1", HD2: "https://megaplay.buzz/stream/s-2/3303/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-1", HDSUB2: "https://megaplay.buzz/stream/s-2/3303/sub" },
+    { id: 2, title: "That Day: The Fall of Shiganshina", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-2", HD2: "https://megaplay.buzz/stream/s-2/3304/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-2", HDSUB2: "https://megaplay.buzz/stream/s-2/3304/sub" },
+    { id: 3, title: "A Dim Light Amid Despair: Humanity's Comeback, Part 1", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-3", HD2: "https://megaplay.buzz/stream/s-2/3305/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-3", HDSUB2: "https://megaplay.buzz/stream/s-2/3305/sub" },
+    { id: 4, title: "The Night of the Closing Ceremony: Humanity's Comeback, Part 2", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-4", HD2: "https://megaplay.buzz/stream/s-2/3306/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-4", HDSUB2: "https://megaplay.buzz/stream/s-2/3306/sub" },
+    { id: 5, title: "First Battle: The Struggle for Trost, Part 1", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-5", HD2: "https://megaplay.buzz/stream/s-2/3307/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-5", HDSUB2: "https://megaplay.buzz/stream/s-2/3307/sub" },
+    { id: 6, title: "The World the Girl Saw: The Struggle for Trost, Part 2", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-6", HD2: "https://megaplay.buzz/stream/s-2/3308/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-6", HDSUB2: "https://megaplay.buzz/stream/s-2/3308/sub" },
+    { id: 7, title: "Small Blade: The Struggle for Trost, Part 3", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-7", HD2: "https://megaplay.buzz/stream/s-2/3309/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-7", HDSUB2: "https://megaplay.buzz/stream/s-2/3309/sub" },
+    { id: 8, title: "I Can Hear His Heartbeat: The Struggle for Trost, Part 4", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-8", HD2: "https://megaplay.buzz/stream/s-2/3310/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-8", HDSUB2: "https://megaplay.buzz/stream/s-2/3310/sub" },
+    { id: 9, title: "Whereabouts of His Left Arm: The Struggle for Trost, Part 5", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-9", HD2: "https://megaplay.buzz/stream/s-2/3311/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-9", HDSUB2: "https://megaplay.buzz/stream/s-2/3311/sub" },
+    { id: 10, title: "Response: The Struggle for Trost, Part 6", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-10", HD2: "https://megaplay.buzz/stream/s-2/3312/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-10", HDSUB2: "https://megaplay.buzz/stream/s-2/3312/sub" },
+    { id: 11, title: "Idol: The Struggle for Trost, Part 7", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-11", HD2: "https://megaplay.buzz/stream/s-2/3313/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-11", HDSUB2: "https://megaplay.buzz/stream/s-2/3313/sub" },
+    { id: 12, title: "Wound: The Struggle for Trost, Part 8", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-12", HD2: "https://megaplay.buzz/stream/s-2/3314/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-12", HDSUB2: "https://megaplay.buzz/stream/s-2/3314/sub" },
+    { id: 13, title: "Primal Desire: The Struggle for Trost, Part 9", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-13", HD2: "https://megaplay.buzz/stream/s-2/3315/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-13", HDSUB2: "https://megaplay.buzz/stream/s-2/3315/sub" },
+    { id: 14, title: "Can't Look into His Eyes Yet: Eve of the Counterattack, Part 1", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-14", HD2: "https://megaplay.buzz/stream/s-2/3316/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-14", HDSUB2: "https://megaplay.buzz/stream/s-2/3316/sub" },
+    { id: 15, title: "Special Operations Squad: Eve of the Counterattack, Part 2", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-15", HD2: "https://megaplay.buzz/stream/s-2/3317/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-15", HDSUB2: "https://megaplay.buzz/stream/s-2/3317/sub" },
+    { id: 16, title: "What Needs to be Done Now: Eve of the Counterattack, Part 3", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-16", HD2: "https://megaplay.buzz/stream/s-2/3318/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-16", HDSUB2: "https://megaplay.buzz/stream/s-2/3318/sub" },
+    { id: 17, title: "Female Titan: The 57th Exterior Scouting Mission, Part 1", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-17", HD2: "https://megaplay.buzz/stream/s-2/3319/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-17", HDSUB2: "https://megaplay.buzz/stream/s-2/3319/sub" },
+    { id: 18, title: "Forest of Giant Trees: The 57th Exterior Scouting Mission, Part 2", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-18", HD2: "https://megaplay.buzz/stream/s-2/3320/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-18", HDSUB2: "https://megaplay.buzz/stream/s-2/3320/sub" },
+    { id: 19, title: "Bite: The 57th Exterior Scouting Mission, Part 3", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-19", HD2: "https://megaplay.buzz/stream/s-2/3321/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-19", HDSUB2: "https://megaplay.buzz/stream/s-2/3321/sub" },
+    { id: 20, title: "Erwin Smith: The 57th Exterior Scouting Mission, Part 4", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-20", HD2: "https://megaplay.buzz/stream/s-2/3322/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-20", HDSUB2: "https://megaplay.buzz/stream/s-2/3322/sub" },
+    { id: 21, title: "Crushing Blow: The 57th Exterior Scouting Mission, Part 5", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-21", HD2: "https://megaplay.buzz/stream/s-2/3323/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-21", HDSUB2: "https://megaplay.buzz/stream/s-2/3323/sub" },
+    { id: 22, title: "The Defeated: The 57th Exterior Scouting Mission, Part 6", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-22", HD2: "https://megaplay.buzz/stream/s-2/3324/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-22", HDSUB2: "https://megaplay.buzz/stream/s-2/3324/sub" },
+    { id: 23, title: "Smile: Assault on Stohess, Part 1", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-23", HD2: "https://megaplay.buzz/stream/s-2/3325/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-23", HDSUB2: "https://megaplay.buzz/stream/s-2/3325/sub" },
+    { id: 24, title: "Mercy: Assault on Stohess, Part 2", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-24", HD2: "https://megaplay.buzz/stream/s-2/3326/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-24", HDSUB2: "https://megaplay.buzz/stream/s-2/3326/sub" },
+    { id: 25, title: "Wall: Assault on Stohess, Part 3", HD1: "https://2anime.xyz/embed/shingeki-no-kyojin-dub-episode-25", HD2: "https://megaplay.buzz/stream/s-2/3327/dub", HDSUB1: "https://2anime.xyz/embed/shingeki-no-kyojin-episode-25", HDSUB2: "https://megaplay.buzz/stream/s-2/3327/sub" },
   ];
 
   const ranvideo = [
@@ -83,6 +83,10 @@ const AttackonTitanSeason1 = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [selectedserver, setSelectedServer] = useState([]);
   const [toggle, setToggle] = useState();
+  const [episodeRange, setEpisodeRange] = useState("001-25");
+  const [episodeSearch, setEpisodeSearch] = useState("");
+  const [showTitles, setShowTitles] = useState(false); // New state for toggling titles
+
   // Set default video and server on initial render
   React.useEffect(() => {
     const defaultVideo = videos.find(video => video.id === 1);
@@ -120,7 +124,26 @@ const AttackonTitanSeason1 = () => {
     }
   };
 
-  
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+        // Disable F12, Ctrl+Shift+I, Ctrl+U
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+            e.preventDefault();
+        }
+    };
+
+    const handleContextMenu = (e) => {
+        e.preventDefault(); // Disable right-click context menu
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
 
   const handleEpisodetoggle = (id) => {
     setToggle((prev) => {
@@ -189,30 +212,94 @@ const AttackonTitanSeason1 = () => {
 
      { /* Main Page Content */}
         <div className="flex flex-col lg:flex-row p-4 gap-4">
-            <div className="bg-gray-800 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md">
-            <img
+
+
+            {/* Anime Poster */}
+            <div className="bg-gray-900 p-4 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-lg text-white flex flex-col">
+           <img
           src="https://tse2.mm.bing.net/th/id/OIP.zvyutMzZ5u0vDoSK5Kr5LAHaLP?cb=iwp1&w=494&h=750&rs=1&pid=ImgDetMain"
           alt="Anime poster"
           className="w-16 md:w-32 lg:w-48"
-          style={{ height: "191px", width: "min-content", objectFit: "cover" }}
+          style={{ height: "min-content",objectFit: "cover" }}
             />
-            <h2 className="text-2xl font-bold mt-2 text-center" style={{ fontSize: "10px" }}></h2>
+              <div className="flex items-center justify-between mb-4">
+                
+                <h2 className="text-xl font-bold">Episodes</h2>
+                <div className="flex items-center space-x-2">
 
-            <h2 className="text-xl font-bold mb-4">List of episodes:</h2>
-            <div className="grid grid-cols-4 gap-2">
-          {videos.map((video) => (
-          <button
-            key={video.id}
-            onClick={() => handleEpisodetoggle(video.id)}
-            className={`px-4 py-2 rounded-lg text-center ${
-              toggle === video.id ? "bg-purple-600" : "bg-gray-700 hover:bg-gray-600"
-            }`}
+                  <button
+                    className="bg-gray-700 px-2 py-1 rounded text-sm hover:bg-gray-600"
+                    onClick={() => setShowTitles(!showTitles)}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center mb-4 space-x-2">
+              <select
+                className="bg-gray-700 text-white rounded px-2 py-1 text-sm focus:outline-none"
+                value={episodeRange}
+                onChange={(e) => setEpisodeRange(e.target.value)}
               >
-            {video.id}
-              </button>
-          ))}
+                <option>001-25</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Find"
+                className="flex-grow bg-gray-700 rounded px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none"
+                value={episodeSearch}
+                onChange={(e) => setEpisodeSearch(e.target.value)}
+              />
+              </div>
+              {showTitles ? (
+                <div className="overflow-y-auto bg-gray-800 rounded-lg p-2" style={{ maxHeight: "34rem" }}>
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <div
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`flex items-center p-2 rounded cursor-pointer ${
+                          toggle === video.id ? "bg-orange-500 text-black" : "hover:bg-gray-700 text-gray-300"
+                        }`}
+                      >
+                        <span className="w-6 text-right mr-4 font-semibold">{video.id}</span>
+                        <span className="truncate">{video.title}</span>
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2">
+                  {videos
+                    .filter((video) => {
+                      const [start, end] = episodeRange.split("-").map((v) => parseInt(v, 10));
+                      if (video.id < start || video.id > end) return false;
+                      if (episodeSearch && !video.id.toString().includes(episodeSearch)) return false;
+                      return true;
+                    })
+                    .map((video) => (
+                      <button
+                        key={video.id}
+                        onClick={() => handleEpisodetoggle(video.id)}
+                        className={`px-4 py-2 rounded-lg text-center ${
+                          toggle === video.id ? "bg-orange-500" : "bg-gray-700 hover:bg-gray-600"
+                        }`}
+                      >
+                        {video.id}
+                      </button>
+                    ))}
+                </div>
+              )}
             </div>
-          </div>
+
+          {/* Video Player */}
           <div className="flex-1 p-4 bg-gray-800 rounded-lg shadow-md">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingTop: "56.25%" }}>
           <iframe
@@ -295,7 +382,7 @@ const AttackonTitanSeason1 = () => {
     </div>
   )
 ))}
-      
+
         </div>
       </div>
       {/* Footer */}
